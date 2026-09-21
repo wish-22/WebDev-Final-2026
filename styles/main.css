@@ -1,0 +1,207 @@
+/* wish-22 */
+html {
+    background-color: #000000;
+    color:#fff;
+
+    font-family: monospace;
+
+    margin:0;
+}
+
+header img {
+    margin:0.5rem;
+    width:calc(50% - 175px);
+    max-width: 225px;
+    min-width: 125px;
+}
+
+
+
+nav ul {
+    display: flex;
+    width:100%;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    padding:0;
+    margin:0.5rem;
+}
+nav ul li {
+    list-style-type: none;
+    display:block;
+    padding:0.5rem;
+    margin:0;
+}
+
+nav ul li a {
+    padding:0.5rem;
+}
+
+nav ul li a, nav ul li a:visited {
+    color:#d79eee;
+}
+nav ul li a:hover {
+    color:#9453ad;
+}
+
+nav ul li a#profile {
+    color:#6edbc0;
+}
+nav ul li a#profile:hover {
+    color:#307463;
+}
+
+nav ul li a:focus, nav ul li a#profile:focus {
+    color:#ffeece;
+}
+
+nav ul li a#here {
+    color:#ffaf64;
+    border: 1px solid #ffaf64;
+}
+
+
+
+body {
+    margin:0;
+}
+
+p {
+    margin:0;
+}
+
+main, aside {
+    background-color: #2d0b4d;
+    margin:0;
+    padding:0.5rem 1rem;
+}
+aside {
+    background-color: #c95bf5;
+    color:#000;
+    font-weight: bold;
+    font-size: 150%;
+}
+aside.indexintro {
+    text-align: center;
+}
+
+/* Used on user menus for double column layout. */
+main.gridmain {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+section#user_songs {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+}
+
+a, a:visited {
+    color:#d79eee;
+}
+a:hover {
+    color:#ffaf64;
+}
+a:focus {
+    color:#ffeece;
+}
+
+fieldset {
+    border:none;
+}
+form p {
+    margin: 0.375rem 0px;
+}
+form label {
+    font-weight: bold;
+}
+form input, form textarea, button {
+    background-color:#000;
+    border:#904bac solid 1px;
+    padding:0.375rem;
+    color: #fff;
+    font-family: inherit;
+    outline: 0;
+}
+form input[type=text]:focus,
+form input[type=password]:focus,
+form input[type=number]:focus {
+    border:#904bac solid 3px;
+    border-right-width: 10px;
+    padding:0.25rem;
+}
+form input[type=submit] {
+    border-color:#4bac8f;
+}
+form input[type=reset] {
+    border-color:#ac4b73;
+}
+button:hover,
+button:active,
+form input[type=button]:hover,
+form input[type=button]:active,
+form input[type=submit]:hover,
+form input[type=submit]:active,
+form input[type=reset]:hover,
+form input[type=reset]:active {
+    border-width:3px;
+    padding:0.25rem;
+    cursor: pointer;
+}
+
+form .required::before {
+    content: "*";
+    color: #ff934b;
+}
+
+form p.formerror {
+    color: #ff8080;
+    font-weight: bold;
+}
+
+table td {
+    padding-right: 1rem;
+    max-width:60rem;
+}
+table td:first-child {
+    font-weight: bold;
+}
+
+footer {
+    margin: 1rem auto 0rem;
+    width:250px;
+    text-align:center;
+    padding: 0.5rem;
+    border:#904bac solid 1px;
+}
+
+.printonly {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    /* Stop user screens from using split column layout */
+    main.gridmain {
+        display: block;
+        grid-template-rows: none;
+        grid-template-columns: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* Put the navigation menu vertically and to the side of the logo */
+    header {
+        float:left;
+    }
+    nav ul {
+        display: block;
+        font-size: 1rem;
+        padding-right: 1rem;
+        margin:0.5rem;
+    }
+    nav ul li {
+        padding-right: 1rem;
+        text-align:right;
+    }
+    section, main {
+        clear: left;
+    }
+}
